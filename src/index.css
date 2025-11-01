@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    touch-action: auto;
+    overscroll-behavior-x: auto;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .image-zoom {
+    transition: transform 0.5s ease;
+  }
+
+  .image-zoom:hover {
+    transform: scale(1.1);
+  }
+
+  .parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .btn-hover-effect {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .btn-hover-effect::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .btn-hover-effect:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+}
