@@ -17,7 +17,7 @@ export default function Preloader() {
     <div className="fixed inset-0 z-[100] bg-black flex items-center justify-center animate-fade-in">
       <div className="text-center">
         <img
-          src="/Screenshot 2025-11-01 200912.png"
+          src="public/logo-crinali.jpeg"
           alt="Crinali Running Club"
           className="h-32 w-auto mx-auto mb-4 animate-pulse-slow"
         />
