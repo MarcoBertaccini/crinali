@@ -84,7 +84,7 @@ export default function Eventi({ onNavigate }: EventiProps = {}) {
       title: 'Birrette',
       description: 'Dopo una bella corsa o un caldo trekking, niente di meglio che rilassarsi insieme con una birretta fresca e chiacchiere.',
       icon: Wine,
-      image: '/birrette.jpeg',
+      image: 'public/birrette.jpeg',
     },
     {
       title: 'Feste e Celebrazioni',
