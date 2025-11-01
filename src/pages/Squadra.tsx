@@ -19,7 +19,7 @@ export default function Squadra({ onNavigate }: SquadraProps = {}) {
       <section
         className="relative h-96 flex items-center justify-center bg-cover bg-center"
         style={{
-          backgroundImage: 'url(/469079813_17857984740314940_1627195982531448301_n.jpg)',
+          backgroundImage: 'url(public/squadra.jpeg)',
         }}
       >
         <div className="absolute inset-0 bg-black/70 pointer-events-none"></div>
