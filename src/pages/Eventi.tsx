@@ -99,7 +99,7 @@ export default function Eventi({ onNavigate }: EventiProps = {}) {
       <section
         className="relative h-96 flex items-center justify-center bg-cover bg-center"
         style={{
-          backgroundImage: 'url(/eventi.jpeg)',
+          backgroundImage: 'url(public/eventi.jpeg)',
         }}
       >
         <div className="absolute inset-0 bg-black/70 pointer-events-none"></div>
