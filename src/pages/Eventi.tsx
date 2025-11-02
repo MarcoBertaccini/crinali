@@ -1,72 +1,10 @@
-import { useState, useEffect } from 'react';
-import { Users, Wine, UtensilsCrossed, Music, Heart, Laugh, Calendar, MapPin } from 'lucide-react';
+import { Users, Wine, UtensilsCrossed, Music, Heart, Laugh } from 'lucide-react';
 
 interface EventiProps {
   onNavigate?: (page: string) => void;
 }
 
-interface AirtableEvent {
-  id: string;
-  fields: {
-    Titolo?: string;
-    Data?: string;
-    Luogo?: string;
-    'Link iscrizione'?: string;
-    Immagine?: Array<{
-      url: string;
-    }>;
-  };
-}
-
 export default function Eventi({ onNavigate }: EventiProps = {}) {
-  const [events, setEvents] = useState<AirtableEvent[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-
-  useEffect(() => {
-    const fetchEvents = async () => {
-      try {
-        const response = await fetch(
-          'https://api.airtable.com/v0/appMWdXxlHvAqOcMc/Eventi%20Crinali',
-          {
-            headers: {
-              Authorization: 'Bearer pataYvWGiMSGsrfOS.19d4c631ec08b7fdb33945c76483ef288c1b8db1b6b55a2b666a008b15cfe627',
-            },
-          }
-        );
-
-        if (!response.ok) {
-          throw new Error('Failed to fetch events');
-        }
-
-        const data = await response.json();
-
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-
-        const futureEvents = data.records
-          .filter((event: AirtableEvent) => {
-            if (!event.fields.Data) return false;
-            const eventDate = new Date(event.fields.Data);
-            return eventDate >= today;
-          })
-          .sort((a: AirtableEvent, b: AirtableEvent) => {
-            const dateA = new Date(a.fields.Data || '').getTime();
-            const dateB = new Date(b.fields.Data || '').getTime();
-            return dateA - dateB;
-          });
-
-        setEvents(futureEvents);
-        setLoading(false);
-      } catch (err) {
-        console.error('Error fetching events:', err);
-        setError(true);
-        setLoading(false);
-      }
-    };
-
-    fetchEvents();
-  }, []);
   const eventTypes = [
     {
       title: 'Trail Running',
@@ -213,98 +151,30 @@ export default function Eventi({ onNavigate }: EventiProps = {}) {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-montserrat font-bold text-black mb-4">Prossimi Eventi</h2>
-            <p className="text-xl text-gray-700">
-              Scopri i nostri eventi in programma e unisciti a noi
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+              Seguici sui social per rimanere aggiornato sui prossimi eventi e le attività in programma
             </p>
           </div>
 
-          {loading && (
-            <div className="text-center py-12">
-              <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-sand-dark"></div>
-              <p className="mt-4 text-gray-600">Caricamento eventi...</p>
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-lg p-12 border border-sand/20">
+              <div className="mb-8">
+                <div className="bg-sand/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Users className="w-10 h-10 text-sand" />
+                </div>
+                <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                  Pubblichiamo regolarmente nuovi eventi su Facebook e Instagram. Unisciti alla community per non perdere nessuna occasione di correre insieme!
+                </p>
+              </div>
+
+              <button
+                onClick={() => onNavigate?.('contatti')}
+                className="bg-sand hover:bg-sand-dark text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-lg"
+              >
+                Seguici sui Social
+              </button>
             </div>
-          )}
-
-          {error && (
-            <div className="text-center py-12 max-w-2xl mx-auto">
-              <p className="text-gray-600 text-lg">
-                Nessun evento disponibile al momento. Controlla presto per aggiornamenti!
-              </p>
-            </div>
-          )}
-
-          {!loading && !error && events.length === 0 && (
-            <div className="text-center py-12 max-w-2xl mx-auto">
-              <p className="text-gray-600 text-lg">
-                Nessun evento disponibile al momento. Controlla presto per aggiornamenti!
-              </p>
-            </div>
-          )}
-
-          {!loading && !error && events.length > 0 && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-              {events.map((event) => {
-                const eventDate = event.fields.Data
-                  ? new Date(event.fields.Data).toLocaleDateString('it-IT', {
-                      day: 'numeric',
-                      month: 'long',
-                      year: 'numeric',
-                    })
-                  : '';
-
-                const imageUrl =
-                  event.fields.Immagine && event.fields.Immagine.length > 0
-                    ? event.fields.Immagine[0].url
-                    : 'https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=800';
-
-                return (
-                  <div
-                    key={event.id}
-                    className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105"
-                  >
-                    <div className="aspect-video w-full overflow-hidden">
-                      <img
-                        src={imageUrl}
-                        alt={event.fields.Titolo || 'Evento'}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-2xl font-montserrat font-bold text-black mb-4">
-                        {event.fields.Titolo || 'Evento'}
-                      </h3>
-
-                      {event.fields.Data && (
-                        <div className="flex items-center gap-2 text-gray-700 mb-3">
-                          <Calendar className="w-5 h-5 text-sand-dark flex-shrink-0" />
-                          <span className="text-sm">{eventDate}</span>
-                        </div>
-                      )}
-
-                      {event.fields.Luogo && (
-                        <div className="flex items-center gap-2 text-gray-700 mb-6">
-                          <MapPin className="w-5 h-5 text-sand-dark flex-shrink-0" />
-                          <span className="text-sm">{event.fields.Luogo}</span>
-                        </div>
-                      )}
-
-                      {event.fields['Link iscrizione'] && (
-                        <a
-                          href={event.fields['Link iscrizione']}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block w-full bg-sand hover:bg-sand-dark text-black text-center px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
-                        >
-                          Iscriviti
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          )}
+          </div>
         </div>
       </section>
     </div>
