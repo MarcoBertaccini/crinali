@@ -64,7 +64,20 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
 
         <button
           className="md:hidden text-black-light"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+         onClick={() => {
+    onNavigate?.('squadra');
+    const targetId = 'quote-iscrizione';
+    const until = performance.now() + 3000; // tenta per massimo 3 secondi
+    const tryScroll = () => {
+      const el = document.getElementById(targetId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
+      if (performance.now() < until) requestAnimationFrame(tryScroll);
+    };
+    requestAnimationFrame(tryScroll);
+  }}
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
