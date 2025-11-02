@@ -78,19 +78,19 @@ export default function Eventi({ onNavigate }: EventiProps = {}) {
       title: 'Trekking',
       description: ': Conoscere nuovi sentieri con la calma e lo spirito di gruppo. Percorsi di media e lunga distanza adatti a tutti.',
       icon: UtensilsCrossed,
-      image:'/trekking.jpeg',
+      image:'public/trekking.jpeg',
     },
     {
       title: 'Birrette',
       description: 'Dopo una bella corsa o un caldo trekking, niente di meglio che rilassarsi insieme con una birretta fresca e chiacchiere.',
       icon: Wine,
-      image: '/birrette.jpeg',
+      image: 'public/birrette.jpeg',
     },
     {
       title: 'Feste e Celebrazioni',
       description: 'Festeggiamo insieme i traguardi raggiunti, le stagioni e ogni occasione per stare insieme.',
       icon: Music,
-      image: '/festeggiamo.jpeg',
+      image: 'public/festeggiamo.jpeg',
     },
   ];
 
