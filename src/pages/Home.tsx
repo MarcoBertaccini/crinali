@@ -27,8 +27,18 @@ export default function Home({ onNavigate }: HomeProps) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
               onClick={() => {
-    window.location.hash = '#quote-iscrizione';
     onNavigate?.('squadra');
+    const targetId = 'quote-iscrizione';
+    const until = performance.now() + 3000; // tenta per massimo 3 secondi
+    const tryScroll = () => {
+      const el = document.getElementById(targetId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
+      if (performance.now() < until) requestAnimationFrame(tryScroll);
+    };
+    requestAnimationFrame(tryScroll);
   }}
               className="w-auto bg-sand hover:bg-sand-dark text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-xl min-h-[44px]"
             >
