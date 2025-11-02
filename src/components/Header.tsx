@@ -55,16 +55,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
             Squadra
           </button>
           <button
-            onClick={() => handleNavigation('contatti')}
-            className="bg-sand hover:bg-sand-dark text-white px-6 py-2.5 rounded-lg font-semibold text-sm transition-all transform hover:scale-105 shadow-md"
-          >
-            Iscriviti
-          </button>
-        </nav>
-
-        <button
-          className="md:hidden text-black-light"
-         onClick={() => {
+            onClick={() => {
     onNavigate?.('squadra');
     const targetId = 'quote-iscrizione';
     const until = performance.now() + 3000; // tenta per massimo 3 secondi
@@ -78,6 +69,15 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
     };
     requestAnimationFrame(tryScroll);
   }}
+            className="bg-sand hover:bg-sand-dark text-white px-6 py-2.5 rounded-lg font-semibold text-sm transition-all transform hover:scale-105 shadow-md"
+          >
+            Iscriviti
+          </button>
+        </nav>
+
+        <button
+          className="md:hidden text-black-light"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
