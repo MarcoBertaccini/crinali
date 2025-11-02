@@ -26,7 +26,13 @@ export default function Home({ onNavigate }: HomeProps) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
-              onClick={() => onNavigate('contatti')}
+              onClick={() => {
+    onNavigate?.('squadra'); // prima naviga alla pagina squadra
+    setTimeout(() => {
+      const section = document.getElementById('quote-iscrizione');
+      section?.scrollIntoView({ behavior: 'smooth' });
+    }, 300); // leggero ritardo per aspettare il render
+  }}
               className="w-auto bg-sand hover:bg-sand-dark text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-xl min-h-[44px]"
             >
               Iscriviti
