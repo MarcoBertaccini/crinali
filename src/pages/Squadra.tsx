@@ -1,5 +1,26 @@
 import { Check, Shirt, Calendar, Users, Award, Heart } from 'lucide-react';
 
+import { useEffect } from 'react';
+
+useEffect(() => {
+  if (window.location.hash !== '#quote-iscrizione') return;
+
+  const targetId = 'quote-iscrizione';
+  const tryScroll = () => {
+    const el = document.getElementById(targetId);
+    if (!el) return false;
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return true;
+  };
+
+  if (!tryScroll()) {
+    let raf: number;
+    const loop = () => { if (!tryScroll()) raf = requestAnimationFrame(loop); };
+    raf = requestAnimationFrame(loop);
+    return () => cancelAnimationFrame(raf);
+  }
+}, []);
+
 interface SquadraProps {
   onNavigate?: (page: string) => void;
 }
