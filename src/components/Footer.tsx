@@ -11,7 +11,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           <div>
             <div className="mb-6">
-              <img src="public/logo-crinali.jpeg" alt="Crinali Running Club" className="h-16 w-auto mb-4" />
+              <img src="/logo-crinali.jpeg" alt="Crinali Running Club" className="h-16 w-auto mb-4" />
               <p className="text-white/80 text-sm leading-relaxed max-w-md">
                 Vivi l’outdoor insieme a noi. Allenamenti, eventi e squadra sui sentieri dell’Appennino.
               </p>
