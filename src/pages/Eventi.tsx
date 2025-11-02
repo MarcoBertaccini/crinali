@@ -48,6 +48,7 @@ export default function Eventi({ onNavigate }: EventiProps = {}) {
           .filter((event: AirtableEvent) => {
             if (!event.fields.Data) return false;
             const eventDate = new Date(event.fields.Data);
+            eventDate.setHours(0, 0, 0, 0);
             return eventDate >= today;
           })
           .sort((a: AirtableEvent, b: AirtableEvent) => {
