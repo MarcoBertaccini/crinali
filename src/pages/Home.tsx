@@ -26,7 +26,7 @@ export default function Home({ onNavigate }: HomeProps) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
-              onClick={() => onNavigate('contatti')}
+              onClick={() => onNavigate('Quote di Iscrizione')}
               className="w-auto bg-sand hover:bg-sand-dark text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-xl min-h-[44px]"
             >
               Iscriviti
