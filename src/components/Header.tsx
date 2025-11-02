@@ -21,7 +21,12 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
           onClick={() => handleNavigation('home')}
           className="hover:opacity-80 transition-opacity"
         >
-          <img src="public/logo-crinali.jpeg" alt="Crinali" className="h-12 w-auto" />
+          <img
+  src={import.meta.env.BASE_URL + 'logo-crinali.jpeg'}
+  alt="Crinali"
+  className="h-12 w-auto"
+/>
+
         </button>
 
         <nav className="hidden md:flex items-center gap-8">
