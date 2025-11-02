@@ -1,31 +1,33 @@
 import { Check, Shirt, Calendar, Users, Award, Heart } from 'lucide-react';
-
 import { useEffect } from 'react';
-
-useEffect(() => {
-  if (window.location.hash !== '#quote-iscrizione') return;
-
-  const targetId = 'quote-iscrizione';
-  const tryScroll = () => {
-    const el = document.getElementById(targetId);
-    if (!el) return false;
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    return true;
-  };
-
-  if (!tryScroll()) {
-    let raf: number;
-    const loop = () => { if (!tryScroll()) raf = requestAnimationFrame(loop); };
-    raf = requestAnimationFrame(loop);
-    return () => cancelAnimationFrame(raf);
-  }
-}, []);
 
 interface SquadraProps {
   onNavigate?: (page: string) => void;
 }
 
 export default function Squadra({ onNavigate }: SquadraProps = {}) {
+  // Scroll automatico alla sezione "Quote di Iscrizione" se c'è l'hash
+  useEffect(() => {
+    if (window.location.hash !== '#quote-iscrizione') return;
+
+    const targetId = 'quote-iscrizione';
+    const tryScroll = () => {
+      const el = document.getElementById(targetId);
+      if (!el) return false;
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return true;
+    };
+
+    if (!tryScroll()) {
+      let raf: number;
+      const loop = () => {
+        if (!tryScroll()) raf = requestAnimationFrame(loop);
+      };
+      raf = requestAnimationFrame(loop);
+      return () => cancelAnimationFrame(raf);
+    }
+  }, []);
+
   const benefits = [
     'T-shirt ufficiale Crinali',
     'Allenamento settimanale di gruppo',
@@ -95,7 +97,7 @@ export default function Squadra({ onNavigate }: SquadraProps = {}) {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-montserrat text-black text-center mb-12">
@@ -159,48 +161,48 @@ export default function Squadra({ onNavigate }: SquadraProps = {}) {
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl font-montserrat text-center mb-8">Quote di Iscrizione</h2>
 
-           <div className="flex flex-col md:flex-row justify-center gap-8">
-  {/* BOX FIDAL */}
-  <div className="bg-sand rounded-lg p-10 border-2 border-sand-dark shadow-xl max-w-md w-full">
-    <h3 className="text-3xl font-montserrat mb-4 text-center">FIDAL</h3>
-    <div className="text-5xl font-bold mb-4 text-center">40€</div>
-    <p className="text-white/90 mb-8 text-center">Valida per tutto l'anno solare</p>
-    <ul className="space-y-3 mb-8">
-      <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Tutti i vantaggi inclusi</span></li>
-      <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Maglia ufficiale</span></li>
-      <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Sconti su eventi</span></li>
-      <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Assicurazione sportiva</span></li>
-      <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Accesso gruppo WhatsApp</span></li>
-    </ul>
-    <button
-      onClick={() => onNavigate?.('contatti')}
-      className="w-full bg-white text-sand hover:bg-gray-100 px-6 py-4 rounded-lg font-semibold transition-colors text-lg"
-    >
-      Iscriviti Ora
-    </button>
-  </div>
+            <div className="flex flex-col md:flex-row justify-center gap-8">
+              {/* BOX FIDAL */}
+              <div className="bg-sand rounded-lg p-10 border-2 border-sand-dark shadow-xl max-w-md w-full">
+                <h3 className="text-3xl font-montserrat mb-4 text-center">FIDAL</h3>
+                <div className="text-5xl font-bold mb-4 text-center">40€</div>
+                <p className="text-white/90 mb-8 text-center">Valida per tutto l'anno solare</p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Tutti i vantaggi inclusi</span></li>
+                  <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Maglia ufficiale</span></li>
+                  <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Sconti su eventi</span></li>
+                  <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Assicurazione sportiva</span></li>
+                  <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Accesso gruppo WhatsApp</span></li>
+                </ul>
+                <button
+                  onClick={() => onNavigate?.('contatti')}
+                  className="w-full bg-white text-sand hover:bg-gray-100 px-6 py-4 rounded-lg font-semibold transition-colors text-lg"
+                >
+                  Iscriviti Ora
+                </button>
+              </div>
 
-  {/* BOX UISP */}
-  <div className="bg-sand rounded-lg p-10 border-2 border-sand-dark shadow-xl max-w-md w-full">
-    <h3 className="text-3xl font-montserrat mb-4 text-center">UISP</h3>
-    <div className="text-5xl font-bold text-center">25€</div>
-    <p className="text-sm text-white/70 mb-4 text-center">(Rinnovo a 20€)</p>
-    <p className="text-white/90 mb-8 text-center">Valida dal 1 Settembre al 31 Agosto</p>
-    <ul className="space-y-3 mb-8">
-      <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Tutti i vantaggi inclusi</span></li>
-      <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Maglia ufficiale</span></li>
-      <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Sconti su eventi</span></li>
-      <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Assicurazione sportiva</span></li>
-      <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Accesso gruppo WhatsApp</span></li>
-    </ul>
-    <button
-      onClick={() => onNavigate?.('contatti')}
-      className="w-full bg-white text-sand hover:bg-gray-100 px-6 py-4 rounded-lg font-semibold transition-colors text-lg"
-    >
-      Iscriviti Ora
-    </button>
-  </div>
-</div>
+              {/* BOX UISP */}
+              <div className="bg-sand rounded-lg p-10 border-2 border-sand-dark shadow-xl max-w-md w-full">
+                <h3 className="text-3xl font-montserrat mb-4 text-center">UISP</h3>
+                <div className="text-5xl font-bold text-center">25€</div>
+                <p className="text-sm text-white/70 mb-4 text-center">(Rinnovo a 20€)</p>
+                <p className="text-white/90 mb-8 text-center">Valida dal 1 Settembre al 31 Agosto</p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Tutti i vantaggi inclusi</span></li>
+                  <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Maglia ufficiale</span></li>
+                  <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Sconti su eventi</span></li>
+                  <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Assicurazione sportiva</span></li>
+                  <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Accesso gruppo WhatsApp</span></li>
+                </ul>
+                <button
+                  onClick={() => onNavigate?.('contatti')}
+                  className="w-full bg-white text-sand hover:bg-gray-100 px-6 py-4 rounded-lg font-semibold transition-colors text-lg"
+                >
+                  Iscriviti Ora
+                </button>
+              </div>
+            </div>
 
             <p className="text-center mt-8 text-white/80">
               La quota include l'assicurazione sportiva e tutti i vantaggi riservati ai membri.
