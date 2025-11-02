@@ -27,11 +27,14 @@ export default function Home({ onNavigate }: HomeProps) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
               onClick={() => {
-    onNavigate?.('squadra'); // prima naviga alla pagina squadra
+    onNavigate?.('squadra');
+    // Aspetta che il DOM della nuova pagina sia montato
     setTimeout(() => {
       const section = document.getElementById('quote-iscrizione');
-      section?.scrollIntoView({ behavior: 'smooth' });
-    }, 300); // leggero ritardo per aspettare il render
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 700); // 700ms per dare tempo al cambio pagina
   }}
               className="w-auto bg-sand hover:bg-sand-dark text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-xl min-h-[44px]"
             >
