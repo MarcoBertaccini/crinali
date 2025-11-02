@@ -110,7 +110,7 @@ export default function Home({ onNavigate }: HomeProps) {
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="public/possibileprogetto.jfif"
+                src={import.meta.env.BASE_URL + 'possibileprogetto.jfif'}
                 alt="Gruppo Crinali"
                 className="w-full h-full object-cover"
                 loading="lazy"

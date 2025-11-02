@@ -73,25 +73,25 @@ export default function Eventi({ onNavigate }: EventiProps = {}) {
       title: 'Trail Running',
       description: 'La nostra passione principale: correre sui sentieri dell\'Appennino, esplorando percorsi di varia difficoltà e lunghezza.',
       icon: Users,
-      image: 'public/trail running.png',
+      image: import.meta.env.BASE_URL + 'trail running.png',
     },
     {
       title: 'Trekking',
       description: ': Conoscere nuovi sentieri con la calma e lo spirito di gruppo. Percorsi di media e lunga distanza adatti a tutti.',
       icon: UtensilsCrossed,
-      image:'public/trekking.jpeg',
+      image: import.meta.env.BASE_URL + 'trekking.jpeg',
     },
     {
       title: 'Birrette',
       description: 'Dopo una bella corsa o un caldo trekking, niente di meglio che rilassarsi insieme con una birretta fresca e chiacchiere.',
       icon: Wine,
-      image: 'public/birrette.jpeg',
+      image: import.meta.env.BASE_URL + 'birrette.jpeg',
     },
     {
       title: 'Feste e Celebrazioni',
       description: 'Festeggiamo insieme i traguardi raggiunti, le stagioni e ogni occasione per stare insieme.',
       icon: Music,
-      image: 'public/festeggiamo.jpeg',
+      image: import.meta.env.BASE_URL + 'festeggiamo.jpeg',
     },
   ];
 
@@ -100,7 +100,7 @@ export default function Eventi({ onNavigate }: EventiProps = {}) {
       <section
         className="relative h-96 flex items-center justify-center bg-cover bg-center"
         style={{
-          backgroundImage: 'url(public/eventi.jpeg)',
+          backgroundImage: `url(${import.meta.env.BASE_URL}eventi.jpeg)`,
         }}
       >
         <div className="absolute inset-0 bg-black/70 pointer-events-none"></div>

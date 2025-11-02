@@ -19,7 +19,7 @@ export default function Squadra({ onNavigate }: SquadraProps = {}) {
       <section
         className="relative h-96 flex items-center justify-center bg-cover bg-center"
         style={{
-          backgroundImage: 'url(/squadra.jpeg)',
+          backgroundImage: `url(${import.meta.env.BASE_URL}squadra.jpeg)`,
         }}
       >
         <div className="absolute inset-0 bg-black/70 pointer-events-none"></div>
@@ -122,7 +122,7 @@ export default function Squadra({ onNavigate }: SquadraProps = {}) {
 
               <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
                 <img
-                  src="/home/project/public/foto maglia crinali.jpeg"
+                  src={import.meta.env.BASE_URL + 'foto maglia crinali.jpeg'}
                   alt="Maglia Crinali"
                   className="w-full h-full object-cover"
                   loading="lazy"
