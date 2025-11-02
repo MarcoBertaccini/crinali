@@ -11,9 +11,8 @@ export default function Home({ onNavigate }: HomeProps) {
       <section className="relative h-screen flex items-center justify-center">
         <div
           className="absolute inset-0 bg-cover bg-center pointer-events-none"
-          style={{
-            backgroundImage: `url(${import.meta.env.BASE_URL}background home.jpeg)`
-          }}
+          style={{ backgroundImage: `url(${import.meta.env.BASE_URL}background-home.jpeg)` }}
+
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60"></div>
         </div>
