@@ -133,7 +133,7 @@ export default function Squadra({ onNavigate }: SquadraProps = {}) {
         </div>
       </section>
 
-      <section className="py-20 bg-black text-white">
+      <section id="quote-iscrizione" className="py-20 bg-black text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl font-montserrat text-center mb-8">Quote di Iscrizione</h2>
