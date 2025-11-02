@@ -12,7 +12,7 @@ export default function Home({ onNavigate }: HomeProps) {
         <div
           className="absolute inset-0 bg-cover bg-center pointer-events-none"
           style={{
-            backgroundImage: 'url("public/background home.jpeg")',
+            backgroundImage: `url(${import.meta.env.BASE_URL}background home.jpeg)`
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60"></div>
