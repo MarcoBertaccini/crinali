@@ -51,7 +51,7 @@ export default function Partner({ onNavigate }: PartnerProps) {
     },
     {
       name: 'Parquet Romagna',
-      logo: 'public/parquet romagna.png',
+      logo: '/parquet romagna.png',
       website: 'https://parquetromagna.it/',
       description: 'Esperti in pavimenti in legno: posa, restauro e design su misura in tutta la Romagna.',
     },
