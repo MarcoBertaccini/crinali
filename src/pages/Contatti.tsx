@@ -150,19 +150,6 @@ export default function Contatti() {
 
           <div className="max-w-5xl mx-auto">
             <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-              <div className="relative h-96 bg-gray-200">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-16 h-16 text-sand mx-auto mb-4" />
-                    <p className="text-gray-600 font-semibold">
-                      Emilia-Romagna, Italia
-                    </p>
-                    <p className="text-sm text-gray-500 mt-2">
-                      Modena e provincia
-                    </p>
-                  </div>
-                </div>
-              </div>
               <div className="p-6 bg-black text-white">
                 <p className="text-center">
                   I nostri eventi si svolgono principalmente nell'Appennino
