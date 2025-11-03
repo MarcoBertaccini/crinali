@@ -74,9 +74,9 @@ export default function Contatti() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-black mb-1">Telefono</h3>
-                  <p className="text-gray-700">+39 333 123 4567</p>
+                  <p className="text-gray-700">+39 3394010495</p>
                   <p className="text-sm text-gray-600">
-                    Lun-Ven: 9:00 - 18:00
+                 
                   </p>
                 </div>
               </div>
