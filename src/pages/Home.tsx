@@ -66,9 +66,9 @@ export default function Home({ onNavigate }: HomeProps) {
               <div className="bg-sand/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-10 h-10 text-sand-dark" />
               </div>
-              <h3 className="text-2xl font-bold text-black mb-3">Sicurezza</h3>
+              <h3 className="text-2xl font-bold text-black mb-3">Team</h3>
               <p className="text-black-light leading-relaxed">
-                Uscite organizzate con guide esperte e assicurazione
+               Squadra di running e trail running
               </p>
             </div>
 
