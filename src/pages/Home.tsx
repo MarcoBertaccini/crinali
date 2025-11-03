@@ -170,7 +170,7 @@ export default function Home({ onNavigate }: HomeProps) {
                   <div className="text-left">
                     <h3 className="font-bold text-black group-hover:text-white mb-1 transition-colors">Email</h3>
                     <p className="text-sm text-black-light group-hover:text-white/90 transition-colors break-all">
-                      info@crinali-running.it
+                      info@crinalirunning.it
                     </p>
                   </div>
                 </a>
