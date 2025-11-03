@@ -43,8 +43,7 @@ export default function Home({ onNavigate }: HomeProps) {
           <button
             onClick={() => handleNavigation('eventi')}
             className="block w-full text-left px-6 py-4 text-black-light hover:bg-cream-dark"
-          
-            >
+                      >
               Partner
             </button>
           </div>
