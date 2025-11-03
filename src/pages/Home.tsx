@@ -26,6 +26,12 @@ export default function Home({ onNavigate }: HomeProps) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
+              onClick={() => onNavigate('contatti')}
+              className="w-auto bg-sand hover:bg-sand-dark text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-xl min-h-[44px]"
+            >
+              Iscriviti
+            </button>
+            <button
               onClick={() => onNavigate('partner')}
               className="w-auto bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all border-2 border-white/50 min-h-[44px]"
             >
