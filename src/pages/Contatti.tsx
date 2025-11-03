@@ -128,4 +128,67 @@ export default function Contatti() {
             Dove Siamo
           </h2>
           <p className="text-center text-gray-700 mb-8 max-w-2xl mx-auto">
-            I nostri eventi si svolgono principalmente nell&
+            I nostri eventi si svolgono principalmente nell&apos;Appennino
+            tosco-romagnolo. Per informazioni specifiche su come raggiungere i
+            punti di ritrovo, contattaci!
+          </p>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-montserrat text-black mb-6">
+            Domande Frequenti
+          </h2>
+          <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
+            Prima di contattarci, dai un&apos;occhiata alle nostre FAQ. Potresti
+            trovare subito la risposta che cerchi!
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h3 className="font-montserrat text-black mb-2">
+                Sono principiante, posso partecipare?
+              </h3>
+              <p className="text-gray-700 text-sm">
+                Assolutamente sì! Organizziamo eventi per tutti i livelli. Basta
+                scegliere l&apos;evento giusto per te.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h3 className="font-montserrat text-black mb-2">
+                Devo essere iscritto per partecipare?
+              </h3>
+              <p className="text-gray-700 text-sm">
+                No, puoi partecipare anche come ospite, ma gli iscritti hanno
+                vantaggi e sconti.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h3 className="font-montserrat text-black mb-2">
+                Quando ci si allena?
+              </h3>
+              <p className="text-gray-700 text-sm">
+                Gli allenamenti di gruppo sono il giovedì sera e il sabato
+                mattina. Date, orari e percorsi variano: contattaci per info.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h3 className="font-montserrat text-black mb-2">
+                Posso portare il mio cane?
+              </h3>
+              <p className="text-gray-700 text-sm">
+                Assolutamente sì. Unica regola, per evitare inconvenienti:
+                sempre al guinzaglio.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
