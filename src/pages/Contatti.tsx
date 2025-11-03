@@ -145,8 +145,7 @@ export default function Contatti() {
             Dove Siamo
           </h2>
           <p className="text-center text-gray-700 mb-8 max-w-2xl mx-auto">
-            La nostra sede si trova nel cuore dell'Emilia-Romagna, punto di
-            partenza ideale per esplorare i sentieri dell'Appennino.
+            I nostri eventi si svolgono principalmente nell'Appennino tosco-romagnolo. Per informazioni specifiche su come raggiungere i punti di ritrovo, contattaci!
           </p>
 
           <div className="max-w-5xl mx-auto">
