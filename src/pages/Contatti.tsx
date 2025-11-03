@@ -80,26 +80,8 @@ export default function Contatti() {
                   </p>
                 </div>
               </div>
-
-              {/* SEDE */}
-              <div className="flex items-start gap-4">
-                <div className="bg-sand/10 p-3 rounded-full">
-                  <MapPin className="w-6 h-6 text-sand" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-black mb-1">Sede</h3>
-                  <p className="text-gray-700">
-                    Via Monti Appennini, 42
-                    <br />
-                    41121 Modena (MO)
-                    <br />
-                    Emilia-Romagna, Italia
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* SOCIAL */}
+              
+                    {/* SOCIAL */}
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="font-montserrat text-black mb-4">
                 Seguici sui Social
