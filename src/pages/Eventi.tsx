@@ -185,30 +185,20 @@ export default function Eventi({ onNavigate }: EventiProps = {}) {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-montserrat text-black text-center mb-8">La Filosofia degli Eventi</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gray-50 rounded-lg p-8">
-                <h3 className="text-xl font-montserrat text-black mb-4">Sul Sentiero</h3>
-                <p className="text-gray-700 leading-relaxed">
-                 Durante le nostre uscite ci supportiamo a vicenda, condividiamo i percorsi più belli e ci spingiamo oltre i nostri limiti. Ma sempre con il sorriso e lo spirito giusto, senza pressioni o competizioni eccessive.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 rounded-lg p-8">
-                <h3 className="text-xl font-montserrat text-black mb-4">A Tavola</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Dopo l'attività fisica, ci piace ritrovarci per mangiare e bere insieme. Dalle cene sociali
-                  agli aperitivi post-corsa, ogni occasione è buona per rilassarsi, raccontare aneddoti e
-                  consolidare le amicizie nate sui sentieri.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     <section className="py-20 bg-white">
+  <div className="container mx-auto px-4">
+    <div className="max-w-3xl mx-auto bg-gray-50 rounded-lg p-10 shadow-md">
+      <h2 className="text-3xl font-montserrat text-black text-center mb-6">
+        La Filosofia degli Eventi
+      </h2>
+      <p className="text-gray-700 leading-relaxed text-center">
+        Durante le nostre uscite ci supportiamo a vicenda, condividiamo i percorsi più belli
+        e ci spingiamo oltre i nostri limiti. Ma sempre con il sorriso e lo spirito giusto,
+        senza pressioni o competizioni eccessive.
+      </p>
+    </div>
+  </div>
+</section>
 
       <section className="py-20 bg-gradient-to-b from-white to-sand-light/20">
         <div className="container mx-auto px-4">
