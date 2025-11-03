@@ -73,7 +73,7 @@ export default function Eventi({ onNavigate }: EventiProps = {}) {
       title: 'Trail Running',
       description: 'La nostra passione principale: correre sui sentieri dell\'Appennino, esplorando percorsi di varia difficoltà e lunghezza.',
       icon: Users,
-      image: import.meta.env.BASE_URL + 'trail running.png',
+      image: import.meta.env.BASE_URL + 'trail-running.jfif',
     },
     {
       title: 'Trekking',
