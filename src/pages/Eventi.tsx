@@ -77,7 +77,7 @@ export default function Eventi({ onNavigate }: EventiProps = {}) {
     },
     {
       title: 'Trekking',
-      description: ': Conoscere nuovi sentieri con la calma e lo spirito di gruppo. Percorsi di media e lunga distanza adatti a tutti.',
+      description: 'Conoscere nuovi sentieri con la calma e lo spirito di gruppo. Percorsi di media e lunga distanza adatti a tutti.',
       icon: UtensilsCrossed,
       image: import.meta.env.BASE_URL + 'trekking.jpeg',
     },
