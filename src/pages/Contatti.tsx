@@ -63,8 +63,7 @@ export default function Contatti() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-black mb-1">Email</h3>
-                  <p className="text-gray-700">info@crinali.it</p>
-                  <p className="text-gray-700">eventi@crinali.it</p>
+                  <p className="text-gray-700">info@crinalirunning.it</p>
                 </div>
               </div>
 
@@ -188,8 +187,7 @@ export default function Contatti() {
                 Quando ci si allena?
               </h3>
               <p className="text-gray-700 text-sm">
-                Gli allenamenti di gruppo sono il martedì sera e il sabato
-                mattina. Date e orari variano, contattaci per info.
+              Gli allenamenti di gruppo sono il giovedì sera e il sabato mattina. Date, orarie percorsi variano, contattaci per info.
               </p>
             </div>
 
@@ -198,8 +196,7 @@ export default function Contatti() {
                 Posso portare il mio cane?
               </h3>
               <p className="text-gray-700 text-sm">
-                Dipende dall'evento. Alcuni percorsi ammettono cani al
-                guinzaglio, altri no. Contattaci prima.
+               Assolutamente sì. Unica regolare per evitare inconvenienti: sempre al guinzaglio
               </p>
             </div>
           </div>
