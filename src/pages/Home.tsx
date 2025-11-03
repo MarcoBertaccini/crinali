@@ -32,8 +32,18 @@ export default function Home({ onNavigate }: HomeProps) {
               Iscriviti
             </button>
             <button
-              onClick={() => onNavigate('partner')}
-              className="w-auto bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all border-2 border-white/50 min-h-[44px]"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+      </div>
+
+      {mobileMenuOpen && (
+        <nav className="md:hidden bg-cream border-t border-sand/20">
+          <button
+            onClick={() => handleNavigation('eventi')}
+            className="block w-full text-left px-6 py-4 text-black-light hover:bg-cream-dark"
+          
             >
               Partner
             </button>
