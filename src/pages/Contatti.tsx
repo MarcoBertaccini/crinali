@@ -148,17 +148,6 @@ export default function Contatti() {
             I nostri eventi si svolgono principalmente nell'Appennino tosco-romagnolo. Per informazioni specifiche su come raggiungere i punti di ritrovo, contattaci!
           </p>
 
-          <div className="max-w-5xl mx-auto">
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-              <div className="p-6 bg-black text-white">
-                <p className="text-center">
-                  I nostri eventi si svolgono principalmente nell'Appennino
-                  modenese e reggiano. Per informazioni specifiche su come
-                  raggiungere i punti di ritrovo, contattaci!
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
