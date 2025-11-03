@@ -246,13 +246,6 @@ export default function Squadra({ onNavigate }: SquadraProps = {}) {
                 </p>
               </div>
             </div>
-
-            <button
-              onClick={() => onNavigate?.('contatti')}
-              className="bg-sand hover:bg-sand-dark text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 text-lg"
-            >
-              ISCRIVITI ORA
-            </button>
           </div>
         </div>
       </section>
