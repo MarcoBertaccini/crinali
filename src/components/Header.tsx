@@ -55,6 +55,14 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
             Squadra
           </button>
           <button
+            onClick={() => handleNavigation('contatti')}
+            className={`text-sm font-medium transition-colors ${
+              currentPage === 'contatti' ? 'text-sand' : 'text-black-light hover:text-sand'
+            }`}
+          >
+            Contatti
+          </button>
+          <button
             onClick={() => {
     onNavigate?.('squadra');
     const targetId = 'quote-iscrizione';
@@ -102,6 +110,12 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
             className="block w-full text-left px-6 py-4 text-black-light hover:bg-cream-dark"
           >
             Squadra
+          </button>
+          <button
+            onClick={() => handleNavigation('contatti')}
+            className="block w-full text-left px-6 py-4 text-black-light hover:bg-cream-dark"
+          >
+            Contatti
           </button>
           <button
             onClick={() => handleNavigation('contatti')}
