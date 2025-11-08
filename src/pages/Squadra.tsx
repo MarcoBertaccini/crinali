@@ -175,7 +175,7 @@ export default function Squadra({ onNavigate }: SquadraProps = {}) {
                   <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Accesso gruppo WhatsApp</span></li>
                 </ul>
                 <button
-                  onClick={() => onNavigate?.('contatti')}
+                  onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSdnr2deWPc7qUHpDH1HzvVYCM8msvyKM-0SVoaPkp72P-ug7w/viewform?usp=publish-editor', '_blank')}
                   className="w-full bg-white text-sand hover:bg-gray-100 px-6 py-4 rounded-lg font-semibold transition-colors text-lg"
                 >
                   Iscriviti Ora
