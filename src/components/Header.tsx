@@ -118,7 +118,21 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
             Contatti
           </button>
           <button
-            onClick={() => handleNavigation('contatti')}
+            onClick={() => {
+              onNavigate('squadra');
+              setMobileMenuOpen(false);
+              const targetId = 'quote-iscrizione';
+              const until = performance.now() + 3000;
+              const tryScroll = () => {
+                const el = document.getElementById(targetId);
+                if (el) {
+                  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  return;
+                }
+                if (performance.now() < until) requestAnimationFrame(tryScroll);
+              };
+              requestAnimationFrame(tryScroll);
+            }}
             className="block w-full text-left px-6 py-4 font-semibold text-sand hover:bg-cream-dark"
           >
             Iscriviti
