@@ -21,7 +21,7 @@ export default function Home({ onNavigate }: HomeProps) {
           <img
   src="/logo_crinali-removebg-preview.png"
   alt="Crinali Running Club"
-  className="mx-auto h-36 md:h-48 mb-4 drop-shadow-lg"
+  className="mx-auto h-48 md:h-60 mb-4 drop-shadow-lg"
 />
 
           <p className="text-xl md:text-2xl mb-12 text-white/90 max-w-2xl mx-auto">
