@@ -19,7 +19,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
         <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
           <img
-  src="/prova.svg"
+  src="/home/project/public/logo_crinali-removebg-preview.png"
   alt="Crinali Running Club"
   className="mx-auto h-24 md:h-28 mb-4 drop-shadow-lg"
 />
