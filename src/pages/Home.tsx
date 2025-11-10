@@ -18,7 +18,7 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
 
         <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-[Futura PT] mb-6 tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-[Poppins] mb-6 tracking-tight">
             Crinali
           </h1>
           <p className="text-xl md:text-2xl mb-12 text-white/90 max-w-2xl mx-auto">
