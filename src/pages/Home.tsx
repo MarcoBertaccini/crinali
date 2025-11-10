@@ -18,9 +18,12 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
 
         <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-[Poppins] mb-6 tracking-tight">
-            Crinali
-          </h1>
+          <img
+  src="/logo-crinali-nero.png"
+  alt="Crinali Running Club"
+  className="mx-auto h-24 md:h-28 mb-4 drop-shadow-lg"
+/>
+
           <p className="text-xl md:text-2xl mb-12 text-white/90 max-w-2xl mx-auto">
             Allenamenti, community, eventi. Vivi l’outdoor insieme a noi.
           </p>
