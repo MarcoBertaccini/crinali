@@ -19,10 +19,10 @@ export default function Home({ onNavigate }: HomeProps) {
 
         <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
           <img
-  src="/logo_crinali-removebg-preview.png"
-  alt="Crinali Running Club"
-  className="mx-auto h-60 md:h-72 mb-4 drop-shadow-lg"
-/>
+            src="/logo_crinali-removebg-preview.png"
+            alt="Crinali Running Club"
+            className="mx-auto h-60 md:h-72 mb-4 drop-shadow-lg"
+           />
 
           <p className="text-xl md:text-2xl mb-12 text-white/90 max-w-2xl mx-auto">
             Allenamenti, community, eventi. Vivi l’outdoor insieme a noi.
