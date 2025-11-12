@@ -12,9 +12,7 @@ interface AirtableEvent {
     Data?: string;
     Luogo?: string;
     'Link iscrizione'?: string;
-    Immagine?: Array<{
-      url: string;
-    }>;
+    Immagine?: Array<{ url: string }>;
   };
 }
 
@@ -30,14 +28,13 @@ export default function Eventi({ onNavigate }: EventiProps = {}) {
           'https://api.airtable.com/v0/appMWdXxlHvAqOcMc/Eventi%20Crinali',
           {
             headers: {
-              Authorization: 'Bearer pataYvWGiMSGsrfOS.19d4c631ec08b7fdb33945c76483ef288c1b8db1b6b55a2b666a008b15cfe627',
+              Authorization:
+                'Bearer pataYvWGiMSGsrfOS.19d4c631ec08b7fdb33945c76483ef288c1b8db1b6b55a2b666a008b15cfe627',
             },
           }
         );
 
-        if (!response.ok) {
-          throw new Error('Failed to fetch events');
-        }
+        if (!response.ok) throw new Error('Failed to fetch events');
 
         const data = await response.json();
 
@@ -68,28 +65,33 @@ export default function Eventi({ onNavigate }: EventiProps = {}) {
 
     fetchEvents();
   }, []);
+
   const eventTypes = [
     {
       title: 'Trail Running',
-      description: 'La nostra passione principale: correre sui sentieri dell\'Appennino, esplorando percorsi di varia difficoltà e lunghezza.',
+      description:
+        "La nostra passione principale: correre sui sentieri dell'Appennino, esplorando percorsi di varia difficoltà e lunghezza.",
       icon: Users,
       image: import.meta.env.BASE_URL + 'trail-running.jfif',
     },
     {
       title: 'Trekking',
-      description: 'Conoscere nuovi sentieri con la calma e lo spirito di gruppo. Percorsi di media e lunga distanza adatti a tutti.',
+      description:
+        'Conoscere nuovi sentieri con la calma e lo spirito di gruppo. Percorsi di media e lunga distanza adatti a tutti.',
       icon: UtensilsCrossed,
       image: import.meta.env.BASE_URL + 'trekking.jpeg',
     },
     {
       title: 'Birrette',
-      description: 'Dopo una bella corsa o un caldo trekking, niente di meglio che rilassarsi insieme con una birretta fresca e chiacchiere.',
+      description:
+        'Dopo una bella corsa o un caldo trekking, niente di meglio che rilassarsi insieme con una birretta fresca e chiacchiere.',
       icon: Wine,
       image: import.meta.env.BASE_URL + 'birrette.jpeg',
     },
     {
       title: 'Feste e Celebrazioni',
-      description: 'Festeggiamo insieme i traguardi raggiunti, le stagioni e ogni occasione per stare insieme.',
+      description:
+        'Festeggiamo insieme i traguardi raggiunti, le stagioni e ogni occasione per stare insieme.',
       icon: Music,
       image: import.meta.env.BASE_URL + 'festeggiamo.jpeg',
     },
@@ -97,11 +99,10 @@ export default function Eventi({ onNavigate }: EventiProps = {}) {
 
   return (
     <div className="pt-20">
+      {/* HERO */}
       <section
         className="relative h-96 flex items-center justify-center bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${import.meta.env.BASE_URL}eventi.jpeg)`,
-        }}
+        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}eventi.jpeg)` }}
       >
         <div className="absolute inset-0 bg-black/70 pointer-events-none"></div>
         <div className="relative z-10 text-center text-white px-4">
@@ -110,12 +111,17 @@ export default function Eventi({ onNavigate }: EventiProps = {}) {
         </div>
       </section>
 
+      {/* INTRO */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-montserrat text-black mb-6">Più di un Running Club</h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Crinali non è solo corsa, trail running e trekking. Siamo una vera community che ama stare insieme non solo sui sentieri, ma anche a tavola, con qualche birretta o durante le nostre occasioni sociali. Organizziamo regolarmente eventi dove il piacere di condividere momenti insieme è al centro di tutto. Perché correre è bello, ma crediamo che farlo con gli amici e festeggiare insieme sia ancora meglio.
+              Crinali non è solo corsa, trail running e trekking. Siamo una vera community che ama
+              stare insieme non solo sui sentieri, ma anche a tavola, con qualche birretta o durante
+              le nostre occasioni sociali. Organizziamo regolarmente eventi dove il piacere di
+              condividere momenti insieme è al centro di tutto. Perché correre è bello, ma crediamo
+              che farlo con gli amici e festeggiare insieme sia ancora meglio.
             </p>
           </div>
 
@@ -153,9 +159,12 @@ export default function Eventi({ onNavigate }: EventiProps = {}) {
         </div>
       </section>
 
+      {/* ATTIVITÀ */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-montserrat text-black text-center mb-12">Le Nostre Attività</h2>
+          <h2 className="text-3xl font-montserrat text-black text-center mb-12">
+            Le Nostre Attività
+          </h2>
           <div className="space-y-8 max-w-5xl mx-auto">
             {eventTypes.map((event, index) => (
               <div
@@ -185,22 +194,24 @@ export default function Eventi({ onNavigate }: EventiProps = {}) {
         </div>
       </section>
 
-     <section className="py-20 bg-white">
-  <div className="container mx-auto px-4">
-    <div className="max-w-3xl mx-auto bg-gray-50 rounded-lg p-10 shadow-md">
-      <h2 className="text-3xl font-montserrat text-black text-center mb-6">
-        La Filosofia degli Eventi
-      </h2>
-      <p className="text-gray-700 leading-relaxed text-center">
-        Durante le nostre uscite ci supportiamo a vicenda, condividiamo i percorsi più belli
-        e ci spingiamo oltre i nostri limiti. Ma sempre con il sorriso e lo spirito giusto,
-        senza pressioni o competizioni eccessive.
-      </p>
-    </div>
-  </div>
-</section>
+      {/* FILOSOFIA */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto bg-gray-50 rounded-lg p-10 shadow-md">
+            <h2 className="text-3xl font-montserrat text-black text-center mb-6">
+              La Filosofia degli Eventi
+            </h2>
+            <p className="text-gray-700 leading-relaxed text-center">
+              Durante le nostre uscite ci supportiamo a vicenda, condividiamo i percorsi più belli
+              e ci spingiamo oltre i nostri limiti. Ma sempre con il sorriso e lo spirito giusto,
+              senza pressioni o competizioni eccessive.
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <section className="py-20 bg-gradient-to-b from-white to-sand-light/20">
+      {/* 🚩 PROSSIMI EVENTI */}
+      <section id="prossimi-eventi" className="py-20 bg-gradient-to-b from-white to-sand-light/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-montserrat font-bold text-black mb-4">Prossimi Eventi</h2>
@@ -209,6 +220,7 @@ export default function Eventi({ onNavigate }: EventiProps = {}) {
             </p>
           </div>
 
+          {/* Loading */}
           {loading && (
             <div className="text-center py-12">
               <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-sand-dark"></div>
@@ -216,6 +228,7 @@ export default function Eventi({ onNavigate }: EventiProps = {}) {
             </div>
           )}
 
+          {/* Error / Nessun evento */}
           {error && (
             <div className="text-center py-12 max-w-2xl mx-auto">
               <p className="text-gray-600 text-lg">
@@ -232,6 +245,7 @@ export default function Eventi({ onNavigate }: EventiProps = {}) {
             </div>
           )}
 
+          {/* Eventi caricati */}
           {!loading && !error && events.length > 0 && (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {events.map((event) => {
