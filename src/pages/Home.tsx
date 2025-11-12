@@ -43,7 +43,7 @@ export default function Home({ onNavigate }: HomeProps) {
               Iscriviti
             </button>
             <button
-              onClick= onClick={() => {
+            onClick={() => {
     onNavigate?.('Eventi');
     const targetId = 'Prossimi Eventi';
     const until = performance.now() + 3000; // tenta per massimo 3 secondi
