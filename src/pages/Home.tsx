@@ -43,8 +43,20 @@ export default function Home({ onNavigate }: HomeProps) {
               Iscriviti
             </button>
             <button
-              onClick={() => onNavigate('partner')}
-              className="w-auto bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all border-2 border-white/50 min-h-[44px]"
+              onClick= onClick={() => {
+    onNavigate?.('Eventi');
+    const targetId = 'Prossimi Eventi';
+    const until = performance.now() + 3000; // tenta per massimo 3 secondi
+    const tryScroll = () => {
+      const el = document.getElementById(targetId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
+      if (performance.now() < until) requestAnimationFrame(tryScroll);
+    };
+    requestAnimationFrame(tryScroll);
+  }}
             >
               Eventi
             </button>
