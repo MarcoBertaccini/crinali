@@ -8,11 +8,11 @@ interface HomeProps {
 export default function Home({ onNavigate }: HomeProps) {
   return (
     <div className="min-h-screen">
+      {/* HERO */}
       <section className="relative h-screen flex items-center justify-center">
         <div
           className="absolute inset-0 bg-cover bg-center pointer-events-none"
           style={{ backgroundImage: `url(${import.meta.env.BASE_URL}background-home.jpeg)` }}
-
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60"></div>
         </div>
@@ -22,11 +22,13 @@ export default function Home({ onNavigate }: HomeProps) {
             src="/logo_crinali-removebg-preview.png"
             alt="Crinali Running Club"
             className="mx-auto h-60 md:h-72 mt-20 mb-4 drop-shadow-lg"
-           />
+          />
 
           <p className="text-xl md:text-2xl mb-12 text-white/90 max-w-2xl mx-auto">
             Allenamenti, community, eventi. Vivi l’outdoor insieme a noi.
           </p>
+
+          {/* BOTTONI HERO */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
               onClick={() => {
@@ -42,11 +44,18 @@ export default function Home({ onNavigate }: HomeProps) {
             >
               Iscriviti
             </button>
-            <button
-            onClick={() => onNavigate('squadra')}
-              className="w-auto bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all border-2 border-white/50 min-h-[44px]"
 
-  
+            <button
+              onClick={() => {
+                onNavigate('eventi'); // naviga alla pagina Eventi
+                setTimeout(() => {
+                  const el = document.getElementById('prossimi-eventi'); // scrolla fino alla sezione
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }, 400); // attende 0.4s per dare tempo al render
+              }}
+              className="w-auto bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all border-2 border-white/50 min-h-[44px]"
             >
               Eventi
             </button>
@@ -54,6 +63,7 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
       </section>
 
+      {/* SEZIONE COMMUNITY */}
       <section className="py-24 bg-sand-light/30">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
@@ -61,7 +71,7 @@ export default function Home({ onNavigate }: HomeProps) {
               <div className="bg-sand/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <Users className="w-10 h-10 text-sand-dark" />
               </div>
-              <h3 className="text-2xl font-bold text-black mb-3">Comunity</h3>
+              <h3 className="text-2xl font-bold text-black mb-3">Community</h3>
               <p className="text-black-light leading-relaxed">
                 Uno dei nostri fondamenti: la condivisione
               </p>
@@ -73,7 +83,7 @@ export default function Home({ onNavigate }: HomeProps) {
               </div>
               <h3 className="text-2xl font-bold text-black mb-3">Team</h3>
               <p className="text-black-light leading-relaxed">
-               Squadra di running e trail running
+                Squadra di running e trail running
               </p>
             </div>
 
@@ -90,6 +100,7 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
       </section>
 
+      {/* NUMERI */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -118,6 +129,7 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
       </section>
 
+      {/* PROGETTO CRINALI */}
       <section id="partner" className="py-24 bg-sand-light/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -149,6 +161,7 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
       </section>
 
+      {/* CONTATTI */}
       <section className="py-24 bg-gradient-to-b from-white to-sand-light/20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -241,7 +254,6 @@ export default function Home({ onNavigate }: HomeProps) {
           </div>
         </div>
       </section>
-
     </div>
   );
 }
