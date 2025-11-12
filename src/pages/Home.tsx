@@ -46,7 +46,7 @@ export default function Home({ onNavigate }: HomeProps) {
             onClick={() => onNavigate('partner')}
               className="w-auto bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all border-2 border-white/50 min-h-[44px]"
 
-  }}
+  
             >
               Eventi
             </button>
