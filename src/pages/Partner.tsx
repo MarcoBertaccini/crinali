@@ -55,6 +55,13 @@ export default function Partner({ onNavigate }: PartnerProps) {
       website: 'https://parquetromagna.it/',
       description: 'Esperti in pavimenti in legno: posa, restauro e design su misura in tutta la Romagna.',
     },
+    {
+      name: 'AF" srl',
+      logo: import.meta.env.BASE_URL + 'logoaf2.png',
+      website: 'https://af2srl.com/it',
+      description: 'AF2 Srl unisce innovazione, efficienza e sostenibilità offrendo soluzioni impiantistiche tecnologiche affidabili per industria e costruzioni.',
+    },
+    
   ];
 
   return (
