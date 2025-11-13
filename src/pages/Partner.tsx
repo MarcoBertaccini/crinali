@@ -151,7 +151,7 @@ const minorPartners = [
             ))}
           </div>
 
-           <div className="mt-20"
+           <div className="mt-20">
         </div>
       
           
