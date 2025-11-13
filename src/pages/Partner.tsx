@@ -85,11 +85,6 @@ const minorPartners = [
       website: 'https://example.com',
     },
   ];
-
-
-
-
-
   
   return (
     <div className="min-h-screen bg-cream overflow-x-hidden">
@@ -157,6 +152,35 @@ const minorPartners = [
               </div>
             ))}
           </div>
+
+          {/* Partner minori */}
+          <div className="mt-20">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-black mb-10">
+              Partner Tecnici
+            </h2>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-4xl mx-auto items-center justify-center">
+              {minorPartners.map((partner, index) => (
+                <a
+                  key={index}
+                  href={partner.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all flex items-center justify-center p-4 h-24 border border-sand/10"
+                >
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+                    loading="lazy"
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
+
+
+          
 
           <div className="mt-16 text-center">
             <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-12 max-w-3xl mx-auto border border-sand/20">
