@@ -66,7 +66,7 @@ export default function Partner({ onNavigate }: PartnerProps) {
 const minorPartners = [
     {
       name: 'Ellestetica',
-      logo: import.meta.env.BASE_URL + 'ellestetica.jpeg',
+      logo: import.meta.env.BASE_URL + 'ellestetica.jpg',
       website: 'https://www.instagram.com/ellestetica.snc/',
     },
     {
