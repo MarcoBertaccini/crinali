@@ -160,7 +160,7 @@ const minorPartners = [
                 className="w-full bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-sand/20 sm:transform sm:hover:-translate-y-2"
               >
                 
-                 <div className="mt-24">
+                 <div className="mt-20">
       
                 <div className="h-20 sm:h-24 bg-white flex items-center justify-center p-4 sm:p-6">
                   {partner.logo ? (
