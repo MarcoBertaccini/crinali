@@ -154,17 +154,17 @@ const minorPartners = [
           </div>
 
            <div className="mt-20">
- </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-8 max-w-5xl mx-auto">
+        </div>
+      
+          
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-8 max-w-5xl mx-auto">
             {minorPartners.map((partner, index) => (
               <div
                 key={index}
                 className="w-full bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-sand/20 sm:transform sm:hover:-translate-y-2"
               >
-                
-                
-      
-                <div className="h-20 sm:h-24 bg-white flex items-center justify-center p-4 sm:p-6">
+            
+                <div className="h-20 sm:h-18 bg-white flex items-center justify-center p-4 sm:p-6">
                   {partner.logo ? (
                     <img
                       src={partner.logo}
