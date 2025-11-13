@@ -66,8 +66,8 @@ export default function Partner({ onNavigate }: PartnerProps) {
 const minorPartners = [
     {
       name: 'Ellestetica',
-      logo: 'https://instagram.fmxp5-1.fna.fbcdn.net/v/t51.2885-19/432803856_376200338654180_7959716748082090240_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fmxp5-1.fna.fbcdn.net&_nc_cat=108&_nc_oc=Q6cZ2QEkgtywreTNzGnE-7eX7pm9iByeXFI3fMVukdrYm9cVTNLqSfeskrWxuBIr3N476Lc&_nc_ohc=jl1wNwKkPMoQ7kNvwHhtobg&_nc_gid=Bod8wFN1iuuqXrByWZ_fqw&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfhhxWuY3MrOeQQI5tZA7LvDfOSrWUCg9yw9FllRCVtHFQ&oe=691C29A0&_nc_sid=7a9f4b',
-      website: 'https://example.com',
+      logo: 'https://www.instagram.com/ellestetica.snc/',
+      website: 'https://www.instagram.com/ellestetica.snc/',
     },
     {
       name: 'Partner minore 2',
