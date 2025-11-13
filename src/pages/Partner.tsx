@@ -72,7 +72,7 @@ const minorPartners = [
     },
     {
       name: 'Partner minore 2',
-      logo: import.meta.env.BASE_URL + 'partner2.png',
+      logo: import.meta.env.BASE_URL + 'chiosco.jpg',
       website: 'https://example.com',
     },
     {
