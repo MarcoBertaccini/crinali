@@ -63,7 +63,34 @@ export default function Partner({ onNavigate }: PartnerProps) {
     },
     
   ];
+const minorPartners = [
+    {
+      name: 'Partner minore 1',
+      logo: import.meta.env.BASE_URL + 'partner1.png',
+      website: 'https://example.com',
+    },
+    {
+      name: 'Partner minore 2',
+      logo: import.meta.env.BASE_URL + 'partner2.png',
+      website: 'https://example.com',
+    },
+    {
+      name: 'Partner minore 3',
+      logo: import.meta.env.BASE_URL + 'partner3.png',
+      website: 'https://example.com',
+    },
+    {
+      name: 'Partner minore 4',
+      logo: import.meta.env.BASE_URL + 'partner4.png',
+      website: 'https://example.com',
+    },
+  ];
 
+
+
+
+
+  
   return (
     <div className="min-h-screen bg-cream overflow-x-hidden">
       <div className="container mx-auto px-4 py-16">
