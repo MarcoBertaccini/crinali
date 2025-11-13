@@ -153,7 +153,50 @@ const minorPartners = [
             ))}
           </div>
 
-          
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-8 max-w-5xl mx-auto">
+            {minorPartners.map((partner, index) => (
+              <div
+                key={index}
+                className="w-full bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-sand/20 sm:transform sm:hover:-translate-y-2"
+              >
+                <div className="h-20 sm:h-24 bg-white flex items-center justify-center p-4 sm:p-6">
+                  {partner.logo ? (
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="max-w-[80%] max-h-full w-auto h-auto object-contain"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="text-center text-gray-400 text-sm">
+                      Logo in arrivo
+                    </div>
+                  )}
+                </div>
+                <div className="p-5 sm:p-6 text-center">
+                  <h3 className="text-base sm:text-lg font-bold text-black mb-2 sm:mb-3">
+                    {partner.name}
+                  </h3>
+                  {partner.description && (
+                    <p className="text-sm text-black-light leading-relaxed mb-4 line-clamp-3" style={{ lineHeight: '1.6' }}>
+                      {partner.description}
+                    </p>
+                  )}
+                  {partner.website && (
+                    <a
+                      href={partner.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sand hover:text-sand-dark font-semibold text-sm transition-colors mt-3 sm:mt-4"
+                    >
+                      Visita il sito
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
 
           
 
