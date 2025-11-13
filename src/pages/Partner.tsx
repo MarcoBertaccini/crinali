@@ -57,7 +57,7 @@ export default function Partner({ onNavigate }: PartnerProps) {
     },
     {
       name: 'AF2 srl',
-      logo: import.meta.env.BASE_URL + '/home/project/public/logoaf2.png',
+      logo: import.meta.env.BASE_URL + 'logoaf2.png',
       website: 'https://af2srl.com/it',
       description: 'AF2 Srl unisce innovazione, efficienza e sostenibilità offrendo soluzioni impiantistiche tecnologiche affidabili per industria e costruzioni.',
     },
