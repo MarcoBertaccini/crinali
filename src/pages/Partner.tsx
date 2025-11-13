@@ -77,14 +77,10 @@ const minorPartners = [
       description: 'Atmosfera rilassata, musica motori e buon cibo: il tuo gastropub per eventi a Rocca San Casciano.',
     },
     {
-      name: 'Partner minore 3',
-      logo: import.meta.env.BASE_URL + 'partner3.png',
-      website: 'https://example.com',
-    },
-    {
-      name: 'Partner minore 4',
-      logo: import.meta.env.BASE_URL + 'partner4.png',
-      website: 'https://example.com',
+      name: 'AVIS Rocca San Casciano',
+      logo: import.meta.env.BASE_URL + 'AVIS.jfif',
+      website: 'https://www.avis.it/',
+      description:'AVIS: Solidarietà attiva, donazione vitale e impegno civico per salvare vite in tutta Italia.'
     },
   ];
   
