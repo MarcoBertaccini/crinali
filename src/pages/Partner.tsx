@@ -68,8 +68,7 @@ const minorPartners = [
       name: 'Ellestetica',
       logo: import.meta.env.BASE_URL + 'ellestetica.jpg',
       website: 'https://www.instagram.com/ellestetica.snc/',
-      description: 'Centro estetico e benessere specializzato in Epilazione laser, Icoone lipolaser corpo,
-                    Massaggi, Biostimolazione viso, hammam, Solarium.'
+      description: 'Centro estetico e benessere specializzato in Epilazione laser, Icoone lipolaser corpo,  Massaggi, Biostimolazione viso, hammam, Solarium.',
     },
     {
       name: 'Partner minore 2',
