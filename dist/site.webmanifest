@@ -1,17 +1,9 @@
 {
-  "name": "Crinali - Trail Running Team",
+  "name": "Crinali Running",
   "short_name": "Crinali",
-  "description": "Crinali Trail Running Team - Unisciti alla nostra squadra",
-  "icons": [
-    {
-      "src": "logo-crinali.jpeg",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
-  ],
-  "theme_color": "#D4A574",
-  "background_color": "#FAF7F2",
+  "start_url": "/",
   "display": "standalone",
-  "start_url": "/"
+  "background_color": "#ffffff",
+  "theme_color": "#D4A574",
+  "icons": []
 }
