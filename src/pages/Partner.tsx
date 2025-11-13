@@ -200,7 +200,7 @@ const minorPartners = [
                   )}
                 </div>
               </div>
-                 </div>
+                
             ))}
           </div>
 
