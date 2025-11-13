@@ -155,7 +155,7 @@ const minorPartners = [
         </div>
       
           
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-7 max-w-3xl mr-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-7 max-w-3xl mr-4">
             {minorPartners.map((partner, index) => (
               <div
                 key={index}
