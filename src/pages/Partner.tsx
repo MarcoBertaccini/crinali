@@ -181,7 +181,7 @@ const minorPartners = [
                     {partner.name}
                   </h3>
                   {partner.description && (
-                    <p className="text-sm text-black-light leading-relaxed mb-4 line-clamp-6" style={{ lineHeight: '1.6' }}>
+                    <p className="text-sm text-black-light leading-relaxed mb-4 line-clamp-8" style={{ lineHeight: '1.6' }}>
                       {partner.description}
                     </p>
                   )}
