@@ -153,32 +153,7 @@ const minorPartners = [
             ))}
           </div>
 
-          {/* Partner minori */}
-          <div className="mt-20">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center text-black mb-10">
-            
-            </h2>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-4xl mx-auto items-center justify-center">
-              {minorPartners.map((partner, index) => (
-                <a
-                  key={index}
-                  href={partner.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all flex items-center justify-center p-4 h-24 border border-sand/10"
-                >
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    className="max-h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
-                    loading="lazy"
-                  />
-                </a>
-              ))}
-            </div>
-          </div>
-
+          
 
           
 
