@@ -71,9 +71,10 @@ const minorPartners = [
       description: 'Centro estetico e benessere specializzato in Epilazione laser, Icoone lipolaser corpo,  Massaggi, Biostimolazione viso, hammam, Solarium.',
     },
     {
-      name: 'Partner minore 2',
+      name: 'Motorchiosco Rocca San Casciano',
       logo: import.meta.env.BASE_URL + 'chiosco.jpg',
       website: 'https://example.com',
+      description: 'Atmosfera rilassata, musica motori e buon cibo: il tuo gastropub per eventi a Rocca San Casciano.',
     },
     {
       name: 'Partner minore 3',
