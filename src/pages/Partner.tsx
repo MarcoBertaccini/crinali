@@ -154,7 +154,11 @@ const minorPartners = [
           </div>
 
           {/* Partner minori */}
-          
+          <div className="mt-20">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-black mb-10">
+            
+            </h2>
+
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-4xl mx-auto items-center justify-center">
               {minorPartners.map((partner, index) => (
                 <a
@@ -173,7 +177,7 @@ const minorPartners = [
                 </a>
               ))}
             </div>
-        
+          </div>
 
 
           
