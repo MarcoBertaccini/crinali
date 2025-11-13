@@ -162,7 +162,7 @@ const minorPartners = [
                 className="w-full bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-sand/20 sm:transform sm:hover:-translate-y-2"
               >
             
-                <div className="h-18 sm:h-18 bg-white flex items-center justify-center p-4 sm:p-6">
+                <div className="h-18 sm:h-20 bg-white flex items-center justify-center p-4 sm:p-6">
                   {partner.logo ? (
                     <img
                       src={partner.logo}
