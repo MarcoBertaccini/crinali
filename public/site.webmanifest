@@ -4,7 +4,7 @@
   "description": "Crinali Trail Running Team - Unisciti alla nostra squadra",
   "icons": [
     {
-      "src": "/logo-crinali.jpeg",
+      "src": "logo-crinali.jpeg",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
