@@ -173,7 +173,7 @@ const minorPartners = [
                 </a>
               ))}
             </div>
-          </div>
+        
 
 
           
