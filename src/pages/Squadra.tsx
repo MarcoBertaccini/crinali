@@ -143,11 +143,11 @@ export default function Squadra({ onNavigate }: SquadraProps = {}) {
                 </ul>
               </div>
 
-              <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
+              <div className="relative h-96 rounded-lg overflow-hidden shadow-lg bg-white">
                 <img
                   src={import.meta.env.BASE_URL + 'foto_maglia_crinali.jpeg'}
                   alt="Maglia Crinali"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   loading="lazy"
                 />
               </div>
