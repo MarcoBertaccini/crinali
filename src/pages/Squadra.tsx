@@ -165,7 +165,7 @@ export default function Squadra({ onNavigate }: SquadraProps = {}) {
               {/* BOX FIDAL */}
               <div className="bg-sand rounded-lg p-10 border-2 border-sand-dark shadow-xl max-w-md w-full">
                 <h3 className="text-3xl font-montserrat mb-4 text-center">FIDAL</h3>
-                <div className="text-5xl font-bold mb-4 text-center">40€</div>
+                <div className="text-5xl font-bold mb-4 text-center">45€</div>
                 <p className="text-white/90 mb-8 text-center">Valida per tutto l'anno solare</p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-3"><Check className="w-5 h-5 text-white" /><span>Tutti i vantaggi inclusi</span></li>
